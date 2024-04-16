@@ -1,0 +1,349 @@
+/* обнуляем все настройки по умолчанию */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* меняет подсчет ширины блока для удобства */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* убираем линии обводки у браузеров */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* делаем значения блочными */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+/* уравниваем поведение шрифтов и элементов для разных браузеров */
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+/* просим теги наследовать семейство шрифта */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+/* убираем некоторые особенности в разных браузерах */
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* обнуляем заголовки h */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+/* ------------------------------------ */
+@font-face {
+  font-family: "Inter Display";
+  src: url("./fonts/InterDisplay-Regular.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("./fonts/InterDisplay-Medium.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "AvantGardeGothicITC";
+  src: url("./fonts/itc-avant-garde-gothic_medium.woff") format("woff2");
+  font-weight: 500;
+}
+
+:root {
+  --Surface-Primary: #111420;
+  --Content-Primary: #eef0f6;
+  --Content-Secondary: #bac1da;
+  --Content-Primary-Inverted: #191e31;
+  --Action-Accent-Primary-Rest: #66e582;
+  --Border-Neutral-Primary: #e5eaf44d;
+  --Action-Accent-Primary-Hover: #85f09d;
+  --Action-Neutral-Secondary-Rest: #e5eaf41a;
+  --Action-Neutral-Secondary-Hover: #e5eaf433;
+}
+
+body {
+  font-family: "Inter Display";
+  background-color: var(--Surface-Primary);
+  color: var(--Content-Primary);
+}
+/*! typography --------------------------------------------------*/
+h1 {
+  font-family: "AvantGardeGothicITC";
+  font-size: clamp(48px, calc(24px + 6vw), 96px);
+  line-height: clamp(48px, calc(27px + 5.25vw), 90px);
+  letter-spacing: clamp(-2px, -2vw, -3.5px);
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "AvantGardeGothicITC";
+  font-size: clamp(32px, calc(16px + 4vw), 64px);
+  line-height: clamp(32px, calc(16px + 4vw), 64px);
+  letter-spacing: clamp(-1px, -2vw, -2px);
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "AvantGardeGothicITC";
+  font-size: clamp(24px, calc(12px + 3vw), 48px);
+  line-height: clamp(24px, calc(12px + 3vw), 48px);
+  letter-spacing: clamp(-0.5px, -2vw, -2px);
+  font-weight: normal;
+}
+
+.hm {
+  font-weight: bold;
+  font-size: clamp(20px, calc(16px + 1vw), 28px);
+  line-height: clamp(28px, calc(26px + 0.5vw), 32px);
+  letter-spacing: clamp(-0.3px, -1vw, -0.5px);
+}
+.pl {
+  font-weight: normal;
+  font-size: clamp(16px, calc(14px + 0.5vw), 20px);
+  line-height: clamp(20px, calc(16px + 1vw), 28px);
+  letter-spacing: 0.5px;
+  max-width: 50ch;
+  text-wrap: balance;
+}
+
+.pm {
+  font-weight: normal;
+  font-size: clamp(14px, calc(13px + 0.25vw), 16px);
+  line-height: clamp(18px, calc(16px + 0.5vw), 22px);
+  letter-spacing: 0.5px;
+  max-width: 60ch;
+}
+.ll {
+  font-weight: bold;
+  font-size: clamp(16px, calc(15px + 0.25vw), 18px);
+  line-height: clamp(20px, calc(18px + 0.5vw), 24px);
+  letter-spacing: 0.1px;
+}
+
+.lm {
+  font-weight: normal;
+  font-size: clamp(14px, calc(13px + 0.25vw), 16px);
+  line-height: clamp(16px, calc(14px + 0.5vw), 20px);
+  letter-spacing: 0.2px;
+}
+
+.c {
+  text-transform: uppercase;
+  font-size: clamp(10px, calc(9px + 0.25vw), 12px);
+  line-height: clamp(10px, calc(9px + 0.25vw), 12px);
+  letter-spacing: clamp(2px, 1vw, 3px);
+}
+/*! typography --------------------------------------------------*/
+/*! ui --------------------------------------------------*/
+.link-w {
+  color: #eef0f6;
+  letter-spacing: 0.1px;
+  padding: 8px 0;
+  position: relative;
+  user-select: none;
+}
+.link-w::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--Content-Secondary);
+  height: 1px;
+  width: 0%;
+  transition: width 0.3s ease 0s;
+}
+.link-w:hover::before {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 6px 10px;
+}
+
+.btn-pr {
+  user-select: none;
+  letter-spacing: 0.1px;
+  color: var(--Content-Primary-Inverted);
+  background: var(--Action-Accent-Primary-Rest);
+  border: 1px solid var(--Border-Neutral-Primary);
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+}
+.btn-pr:hover {
+  background: var(--Action-Accent-Primary-Hover);
+}
+.btn-pr:active {
+  background: var(--Action-Accent-Primary-Rest);
+}
+
+.btn-sc {
+  user-select: none;
+  letter-spacing: 0.1px;
+  color: var(--Content-Primary);
+  background: var(--Action-Neutral-Secondary-Rest);
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-sc:hover {
+  background: var(--Action-Neutral-Secondary-Hover);
+}
+.btn-sc:active {
+  background: var(--Action-Accent-Primary-Rest);
+}
+
+/*! ui --------------------------------------------------*/
+/*! heeader --------------------------------------------------*/
+.container {
+  max-width: 1416px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+.header {
+  height: 100dvh;
+  position: relative;
+}
+
+.header__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 24px 0px 48px 0px;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.header__title {
+}
+.header__blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header__block {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.header__block-row {
+  flex-direction: row;
+}
+.header__block-item {
+}
+
+.header__text {
+  font-family: "Inter Display";
+  font-weight: normal;
+}
+
+.header__label {
+  color: var(--Content-Secondary);
+}
+.header__bg {
+  position: absolute;
+  right: 0;
+  top: -6vh;
+  width: 100dvw;
+  height: 80dvh;
+  z-index: 2;
+  mix-blend-mode: lighten;
+  background-size: cover;
+}
+.gradient-md {
+  position: absolute;
+  bottom: -20vw;
+  z-index: 1;
+  left: 0vw;
+}
+.gradient-sm {
+  position: absolute;
+  left: 7vw;
+  bottom: -5vw;
+  z-index: 1;
+}
+.gradient-big {
+  position: absolute;
+  right: 0vw;
+  top: 0vw;
+  z-index: 1;
+}
+/*! heeader --------------------------------------------------*/
+/*! solutions --------------------------------------------------*/
+.sol {
+  min-height: 100dvh;
+}
+
+/*! solutions --------------------------------------------------*/

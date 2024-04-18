@@ -15,7 +15,7 @@
       defer
     ></script>
     <script src="./libs/gsap-public/minified/gsap.min.js" defer></script>
-    <!-- <script src="./scripts/script.js" type="module" defer></script> -->
+    <script src="./scripts/script.js" type="module" defer></script>
   </head>
   <body>
     <header class="header">
@@ -27,7 +27,11 @@
       <div class="container">
         <div class="header__main">
           <div class="header__top">
-            <img src="./img/logo.svg" alt="" class="header__logo" />
+            <div class="header__wrapper">
+              <img src="./img/logo.svg" alt="" class="header__logo" />
+              <img src="./img/Hamburger.svg" alt="" class="header__burger" />
+            </div>
+
             <nav class="header__nav">
               <a href="" class="lm link-w header__link">Решения</a>
               <a href="" class="lm link-w header__link">Кейсы</a>
@@ -37,6 +41,7 @@
               <a href="" class="lm btn-pr btn-sm header__link"
                 >Оставить заявку</a
               >
+              <img class="header__close" src="./img/close.svg" alt="" />
             </nav>
           </div>
           <div class="header__body">
@@ -77,7 +82,802 @@
       </div>
     </header>
     <main class="main">
-      <section class="sol"></section>
+      <section class="sol">
+        <div class="container">
+          <div class="sol__top">
+            <h2 class="sol__title">
+              Находим работающие решения для ваших задач
+            </h2>
+            <h3 class="pl sol__about">
+              Беремся за задачи, в которых у нас есть опыт и экспертиза. За
+              каждое решение отвечает команда опытных юристов,
+              которая&#160;найдет подход к вашему бизнесу
+            </h3>
+          </div>
+          <div class="sol__filters">
+            <div class="lm sol__filter active" data-value="sol__item">
+              Все решения
+            </div>
+            <div class="lm sol__filter" data-value="reg">
+              Взаимодействие с регуляторами
+            </div>
+            <div class="lm sol__filter" data-value="eff">
+              Повышение эффективности функции
+            </div>
+            <div class="lm sol__filter" data-value="new">
+              Запустить новый проект
+            </div>
+          </div>
+          <div class="sol__body">
+            <div class="sol__item eff">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">
+                  Стратегические и&#160;управленческие решения
+                </h4>
+                <p class="pm sol__text">
+                  За 25 лет мы прошли несколько трансформаций юридической
+                  функции, внедрили новые технологии и готовы делиться опытом
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm">Настроим работу юридической команды</span>
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Проведем профдиагностику юристов и определим направления
+                      развития</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Подберем инструменты для ускорения процессов
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item eff">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Марк Циолковский</p>
+                  <p class="c sol__job">
+                    Руководитель практики корпоративного мониторинга и комплаенс
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">Корпоративные решения</h4>
+                <p class="pm sol__text">
+                  Подобрали и внедрили управленческие модели для 130 клиентов —
+                  как для крупных АО, так и для ООО с одним участником
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Спроектируем модель управления под ваc</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm"> Поможем оптимизировать процессы</span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item reg">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">Интеллектуальные решения</h4>
+                <p class="pm sol__text">
+                  Построили систему работы с интеллектуальной собственностью в
+                  крупной технологической компании и научились работать с
+                  портфелями ИС любого объема и сложности.
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Обеспечим стандартизацию процессов: от типизации
+                      шаблонных задач до создания системы управления ИС</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Сопроводим результаты интеллектуальной деятельности от
+                      создания и регистрации до коммерциализации и защиты</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Получим ИТ-аккредитацию и поможем ИТ-компании получить
+                      льготы
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item reg">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Марк Циолковский</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">
+                  Антимонопольные и тарифные решения
+                </h4>
+                <p class="pm sol__text">
+                  Сопровождаем деятельность одной из крупнейших в стране ВИНК по
+                  всему спектру антимонопольных вопросов, включая доминирование
+                  на рынках, вопросы закупок и торгов, субъектов естественных
+                  монополий. Одними из первых в России разработали и согласовали
+                  с ФАС России правила торговой практики.
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm">Поможем избежать оборотных штрафов</span>
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Оценим на соответствие антимонопольному законодательству и
+                      выявим риски</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm"> Поможем оспорить тарифы </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item reg">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Марк Циолковский</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">HSE-решения</h4>
+                <p class="pm sol__text">
+                  25 лет успешно защищаем интересы крупнейших
+                  нефтеперерабатывающих заводов в России, десятки добывающих
+                  предприятий ТЭК, в том числе в заполярье и на континентальном
+                  шельфе, в вопросах экологии, промышленной безопасности и
+                  охраны труда.
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Проконсультируем по природоохранному
+                      законодательству</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Защитим от привлечения к ответственности и сопроводим
+                      проверки</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем получить лицензию на недропользование и
+                      маркшейдерию
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item new">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">
+                  Налоговые и&#160;таможенные решения
+                </h4>
+                <p class="pm sol__text">
+                  Сэкономили бизнесу миллиарды рублей через повышение налоговой
+                  эффективности. Одержали пять знаковых побед в Верховном суде и
+                  четыре — в Конституционном
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Проконсультируем по фискальному законодательству</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем вернуть несправедливые таможенные платежи
+                    </span>
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем выпустить товары, по которым таможня вынесла отказ
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item new">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">Регуляторные решения</h4>
+                <p class="pm sol__text">
+                  Тысячи проверок в год научили нас заранее готовить к ним
+                  бизнес и проходить через них без потерь
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm">Проведем правовой аудит бизнеса </span>
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Сопроводим контрольно-надзорные мероприятия</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем оценить и повысить защищенность топ-менеджмента от
+                      привлечения к ответственности
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item new">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">Коммерческие решения</h4>
+                <p class="pm sol__text">
+                  25 лет сопровождаем продажи в группе компаний с
+                  диверсифицированным бизнесом — от сырья и нефтепродуктов до
+                  технологий и кофе на АЗС
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Сопроводим процессы от производства до розничной
+                      реализации продукта или услуги</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm"> Снизим коммерческие риски</span>
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="sol__item new">
+              <div class="sol__header">
+                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__info">
+                  <p class="lm sol__name">Светлана Бухтоярова</p>
+                  <p class="c sol__job">
+                    Руководитель направления стратегии и управления
+                  </p>
+                </div>
+              </div>
+              <div class="sol__body-info">
+                <h4 class="hm sol__subtitle">Капитальные решения</h4>
+                <p class="pm sol__text">
+                  Сопровождаем 300 производственных и гражданских объектов. В
+                  нашем порфолио: строительство Лахта-центра в Петербурге,
+                  G-Drive Арены в Омске и модернизация нефтеперерабатывающих
+                  заводов.
+                </p>
+                <ul class="sol__list">
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <span class="pm"
+                      >Сопроводим строительство и ввод в эксплуатацию
+                      объектов</span
+                    >
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем оформить документы, решим налоговые вопросы</span
+                    >
+                  </li>
+                </ul>
+                <button class="btn-pr btn-md sol__btn">Оставить заявку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <img src="./img/Ellipse-md.svg" alt="" class="gradient-md" />

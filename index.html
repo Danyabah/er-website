@@ -33,22 +33,27 @@
             </div>
 
             <nav class="header__nav">
-              <a href="" class="lm link-w header__link">Решения</a>
-              <a href="" class="lm link-w header__link">Кейсы</a>
-              <a href="" class="lm link-w header__link">Этика</a>
-              <a href="" class="lm link-w header__link">Технологии</a>
-              <a href="" class="lm link-w header__link">Контакты</a>
-              <a href="" class="lm btn-pr btn-sm header__link"
+              <img class="header__close" src="./img/close.svg" alt="" />
+              <a href="#sol" class="lm link-w header__link">Решения</a>
+              <a href="#case" class="lm link-w header__link">Кейсы</a>
+              <a href="#int" class="lm link-w header__link">Этика</a>
+              <a href="#tech" class="lm link-w header__link">Технологии</a>
+              <a href="#contact" class="lm link-w header__link">Контакты</a>
+              <a href="#contact" class="lm btn-pr btn-sm header__link"
                 >Оставить заявку</a
               >
-              <img class="header__close" src="./img/close.svg" alt="" />
             </nav>
           </div>
           <div class="header__body">
-            <h1 class="header__title">
-              Правовые решения <br />
-              для крупного бизнеса
-            </h1>
+            <div class="header__title-wrapper">
+              <h1 class="header__title">
+                Правовые решения <br />
+                для крупного бизнеса
+              </h1>
+              <a href="#contact" class="lm btn-pr btn-md top__link"
+                >Оставить заявку</a
+              >
+            </div>
             <div class="header__blocks">
               <div class="header__block">
                 <p class="hm header__text">
@@ -68,11 +73,15 @@
 
               <div class="header__block header__block-row">
                 <div class="header__block-item">
-                  <p class="hm header__text">1300 →</p>
+                  <p class="hm header__text">
+                    1300 <span class="desktop">→</span>
+                  </p>
                   <p class="pm header__label">судебных разбирательств</p>
                 </div>
                 <div class="header__block-item">
-                  <p class="hm header__text">93%</p>
+                  <p class="hm header__text">
+                    <span class="mobile">→</span>93%
+                  </p>
                   <p class="pm header__label">выигранных процессов</p>
                 </div>
               </div>
@@ -82,7 +91,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="sol">
+      <section class="sol" id="sol">
         <div class="container">
           <div class="sol__top">
             <h2 class="sol__title">
@@ -294,9 +303,9 @@
               <div class="sol__body-info">
                 <h4 class="hm sol__subtitle">Интеллектуальные решения</h4>
                 <p class="pm sol__text">
-                  Построили систему работы с интеллектуальной собственностью в
-                  крупной технологической компании и научились работать с
-                  портфелями ИС любого объема и сложности.
+                  Построили систему работы с ИС в крупной технологической
+                  компании, научились работать с портфелями ИС любого объема и
+                  сложности
                 </p>
                 <ul class="sol__list">
                   <li class="sol__list-item">
@@ -319,9 +328,30 @@
                       </svg>
                     </div>
 
-                    <span class="pm"
-                      >Обеспечим стандартизацию процессов: от типизации
-                      шаблонных задач до создания системы управления ИС</span
+                    <span class="pm">Создадим систему управления ИС </span>
+                  </li>
+                  <li class="sol__list-item">
+                    <div class="sol__icon-wrapper">
+                      <svg
+                        class="sol__icon"
+                        width="12"
+                        height="10"
+                        viewBox="0 0 12 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
+                          stroke="#66E582"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span class="pm">
+                      Поможем с регистрацией, коммерциализацией и защитой
+                      ИС</span
                     >
                   </li>
                   <li class="sol__list-item">
@@ -344,32 +374,7 @@
                       </svg>
                     </div>
                     <span class="pm">
-                      Сопроводим результаты интеллектуальной деятельности от
-                      создания и регистрации до коммерциализации и защиты</span
-                    >
-                  </li>
-                  <li class="sol__list-item">
-                    <div class="sol__icon-wrapper">
-                      <svg
-                        class="sol__icon"
-                        width="12"
-                        height="10"
-                        viewBox="0 0 12 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1.33337 5.66663L4.00004 8.33329L10.6667 1.66663"
-                          stroke="#66E582"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <span class="pm">
-                      Получим ИТ-аккредитацию и поможем ИТ-компании получить
-                      льготы
+                      Поможем получить ИТ-аккредитацию и льготы
                     </span>
                   </li>
                 </ul>
@@ -398,11 +403,9 @@
                   Антимонопольные и тарифные решения
                 </h4>
                 <p class="pm sol__text">
-                  Сопровождаем деятельность одной из крупнейших в стране ВИНК по
-                  всему спектру антимонопольных вопросов, включая доминирование
-                  на рынках, вопросы закупок и торгов, субъектов естественных
-                  монополий. Одними из первых в России разработали и согласовали
-                  с ФАС России правила торговой практики.
+                  Сопровождаем деятельность одной из крупнейших ВИНК страны.
+                  Одними из первых разработали и согласовали с ФАС России
+                  правила торговой практики.
                 </p>
                 <ul class="sol__list">
                   <li class="sol__list-item">
@@ -496,11 +499,9 @@
               <div class="sol__body-info">
                 <h4 class="hm sol__subtitle">HSE-решения</h4>
                 <p class="pm sol__text">
-                  25 лет успешно защищаем интересы крупнейших
-                  нефтеперерабатывающих заводов в России, десятки добывающих
-                  предприятий ТЭК, в том числе в заполярье и на континентальном
-                  шельфе, в вопросах экологии, промышленной безопасности и
-                  охраны труда.
+                  25 лет защищаем интересы крупнейших НПЗ в России и десятки
+                  добывающих предприятий ТЭК в вопросах экологии,
+                  промбезопасности и охраны труда
                 </p>
                 <ul class="sol__list">
                   <li class="sol__list-item">
@@ -602,9 +603,9 @@
                   Налоговые и&#160;таможенные решения
                 </h4>
                 <p class="pm sol__text">
-                  Сэкономили бизнесу миллиарды рублей через повышение налоговой
+                  Помогаем бизнесу развиваться быстрее через повышение налоговой
                   эффективности. Одержали пять знаковых побед в Верховном суде и
-                  четыре — в Конституционном
+                  четыре — в Конституционном суде
                 </p>
                 <ul class="sol__list">
                   <li class="sol__list-item">
@@ -873,9 +874,8 @@
               <div class="sol__body-info">
                 <h4 class="hm sol__subtitle">Капитальные решения</h4>
                 <p class="pm sol__text">
-                  Сопровождаем 300 производственных и гражданских объектов. В
-                  нашем порфолио: строительство Лахта-центра в Петербурге,
-                  G-Drive Арены в Омске и модернизация нефтеперерабатывающих
+                  Сопровождали строительство «Лахта Центра» в Петербурге,
+                  G-Drive Арены в Омске и модернизацию нефтеперерабатывающих
                   заводов.
                 </p>
                 <ul class="sol__list">
@@ -953,7 +953,7 @@
           </div>
         </div>
       </section>
-      <section class="case">
+      <section class="case" id="case">
         <img
           src="./img/elipse-case-left.svg"
           alt=""
@@ -988,9 +988,10 @@
                 <div class="case__top second">
                   <h4 class="pl case__second">
                     Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    разведки и добычи углеводородов INDUSTRIX. Закрыли все
+                    юридические задачи — от разработки положений программы до
+                    выработки договорных конструкций по финансированию
+                    стартапов.
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1017,7 +1018,7 @@
                 <div></div>
                 <div class="case__top first">
                   <h4 class="hm case__name">
-                    Запуск акселератора технологических проектов
+                    Строительство первого в России СПГ-бункеровщика
                   </h4>
                   <p class="pm case__text case__category">
                     Коммерческие и регуляторные решения · Стратегия и управление
@@ -1025,10 +1026,11 @@
                 </div>
                 <div class="case__top second">
                   <h4 class="pl case__second">
-                    Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    Сопроводили строительство судна «Дмитрий Менделеев» на
+                    верфи. Решили спорные юридические моменты в ходе
+                    строительства, приемки, регистрации и ввода в эксплуатацию.
+                    Реализовали схему дистанционной приемки судна в Китае,
+                    Петербурге и Сингапуре.
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1055,7 +1057,7 @@
                 <div></div>
                 <div class="case__top first">
                   <h4 class="hm case__name">
-                    Запуск акселератора технологических проектов
+                    Строительство «Лахта Центра» в Санкт-Петербурге
                   </h4>
                   <p class="pm case__text case__category">
                     Коммерческие и регуляторные решения · Стратегия и управление
@@ -1063,10 +1065,10 @@
                 </div>
                 <div class="case__top second">
                   <h4 class="pl case__second">
-                    Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    Комплексно сопроводили строительство крупнейшего в Европе
+                    небоскреба. Получили положительные решения в судах при
+                    обжаловании градостроительной документации противниками
+                    строительства.
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1093,7 +1095,7 @@
                 <div></div>
                 <div class="case__top first">
                   <h4 class="hm case__name">
-                    Запуск акселератора технологических проектов
+                    Создание совместных ИТ-предприятий с доходом >1 млрд в год 
                   </h4>
                   <p class="pm case__text case__category">
                     Коммерческие и регуляторные решения · Стратегия и управление
@@ -1101,10 +1103,12 @@
                 </div>
                 <div class="case__top second">
                   <h4 class="pl case__second">
-                    Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    Провели due diligence вносимых партнерами ИТ-активов,
+                    разработали и реализовали схему устранения выявленных
+                    рисков. Разработали положения по передаче ИТ-активов в
+                    совместное предприятие. Подготовили и согласовали условия
+                    контрактования предприятия с компаниями группы и сторонними
+                    клиентами.
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1131,7 +1135,8 @@
                 <div></div>
                 <div class="case__top first">
                   <h4 class="hm case__name">
-                    Запуск акселератора технологических проектов
+                    Создание первой в мире платформы на базе блокчейна для
+                    заправки самолетов и расчетов за авиатопливо
                   </h4>
                   <p class="pm case__text case__category">
                     Коммерческие и регуляторные решения · Стратегия и управление
@@ -1139,10 +1144,8 @@
                 </div>
                 <div class="case__top second">
                   <h4 class="pl case__second">
-                    Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    Создание первой в мире платформы на базе блокчейна для
+                    заправки самолетов и расчетов за авиатопливо
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1169,7 +1172,7 @@
                 <div></div>
                 <div class="case__top first">
                   <h4 class="hm case__name">
-                    Запуск акселератора технологических проектов
+                    Создание цифровой платформы на 36 тысяч пользователей
                   </h4>
                   <p class="pm case__text case__category">
                     Коммерческие и регуляторные решения · Стратегия и управление
@@ -1177,10 +1180,10 @@
                 </div>
                 <div class="case__top second">
                   <h4 class="pl case__second">
-                    Сопроводили запуск акселератора технологических проектов
-                    разведки и добычи углеводородов INDUSTRIX от разработки
-                    положений программы до выработки договорных конструкций по
-                    финансированию стартапов.
+                    Провели ИТ-аудит компонентов платформы, сформировали
+                    нематериальные активы. Разработали контрактную модель
+                    взаимодействия участников, пользовательское соглашение,
+                    правила работы на платформе и положения о конфиденциальности
                   </h4>
                 </div>
                 <div class="case__bottom">
@@ -1208,7 +1211,7 @@
         </div>
       </section>
 
-      <section class="int">
+      <section class="int" id="int">
         <img src="./img/Line-vertical.svg" alt="" class="line-vertical" />
         <img src="./img/Line-horizontal.svg" alt="" class="line-horizontal" />
         <img src="./img/Line-rounded.svg" alt="" class="line-rounded" />
@@ -1318,7 +1321,7 @@
           </div>
         </div>
       </section>
-      <section class="tech">
+      <section class="tech" id="tech">
         <img
           src="./img/Line-horizontal.svg"
           alt=""
@@ -1369,12 +1372,127 @@
                   </h6>
                 </div>
               </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/002.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Система правовых консультаций</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">
+                    Система корпоративного контроля 
+                  </h5>
+                  <h6 class="pm tech__p">
+                    Позволяет выявлять сделки, которые не были одобрены и
+                    контролирует использование инсайдерской информации 
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/003.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Управление ИС</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">
+                    Система управления интеллектуальной cобственностью
+                  </h5>
+                  <h6 class="pm tech__p">
+                    Контролирует доступ к информации об интеллектуальной
+                    собственности, рассчитывает пошлины и напоминает об уплате.
+                    Отслеживает события по лицензионным договорам 
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/004.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Мониторинг дел и отчетность</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">Кюрасао</h5>
+                  <h6 class="pm tech__p">
+                    Автоматический мониторинг судебных дел и
+                    контрольно-надзорных мероприятий на внешних ресурсах,
+                    распределение дел по экспертам и отчеты по всем видам дел за
+                    выбранный период 
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/001.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Система экспертных консультаций</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">Лекст</h5>
+                  <h6 class="pm tech__p">
+                    Позволяет оперативно получить консультацию эксперта,
+                    содержит базу знаний, контролирует время ответа, качество
+                    заключения и обратную связь  
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/001.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Система экспертных консультаций</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">Конструктор документов</h5>
+                  <h6 class="pm tech__p">
+                    Формирует договоры и доверенности без участия юристов, а так
+                    же интегрируется в системы ЭДО
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/001.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Система экспертных консультаций</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">
+                    Цифровая структура группы компаний 
+                  </h5>
+                  <h6 class="pm tech__p">
+                    Отслеживает корпоративные события, хранит учредительные
+                    документы и корпоративные решения
+                  </h6>
+                </div>
+              </div>
+              <div class="tech__card">
+                <div class="tech__info">
+                  <div class="tech__num-wrapper">
+                    <img src="./img/001.svg" alt="" class="tech__num" />
+                  </div>
+                  <p class="tech__categ">Система экспертных консультаций</p>
+                </div>
+                <div class="tech__block">
+                  <h5 class="hm tech__name">Портал самообслуживания</h5>
+                  <h6 class="pm tech__p">
+                    Предоставляет клиентам доступ ко всем правовым сервисам по
+                    одному клику
+                  </h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <img src="./img/Ellipse-md.svg" alt="" class="gradient-md" />
       <img src="./img/Ellipse-sm.svg" alt="" class="gradient-sm" />
       <img src="./img/Ellipse-verybig.svg" alt="" class="gradient-big" />
@@ -1436,67 +1554,64 @@
                   </div>
                   <div class="combobox__body">
                     <div class="checkbox combobox__item">
-                      <input type="checkbox" class="checkbox__inp" id="chk" />
+                      <input
+                        type="checkbox"
+                        checked
+                        class="checkbox__inp"
+                        id="chk"
+                      />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Стратегические и управленческие решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Корпоративные решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Интеллектуальные решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Антимонопольные решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Налоговые решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >HSE-решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Регуляторные решения</label
                       >
                     </div>
                     <div class="checkbox combobox__item">
                       <input type="checkbox" class="checkbox__inp" id="chk" />
                       <label class="lm checkbox__label" for="chk"
-                        >Согласен с политикой обработки персональных
-                        данных</label
+                        >Коммерческие решения</label
                       >
                     </div>
                   </div>
                 </div>
               </div>
               <div class="checkbox">
-                <input type="checkbox" class="checkbox__inp" id="chk" />
-                <label class="lm checkbox__label" for="chk"
+                <input type="checkbox" class="checkbox__inp" id="agree" />
+                <label class="lm checkbox__label" for="agree"
                   >Согласен с политикой обработки персональных данных</label
                 >
               </div>

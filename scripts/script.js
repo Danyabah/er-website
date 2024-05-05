@@ -16,6 +16,10 @@ const comboValue = document.querySelector(".combobox__value");
 const comboInputs = document.querySelectorAll(".checkbox__inp");
 const solBtns = document.querySelectorAll(".sol__btns .sol__btn:first-child");
 
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 burger.addEventListener("click", (event) => {
   burger.style.display = "none";
   wrapper.style.width = "50%";
@@ -36,13 +40,13 @@ comboItems.forEach((cb, index) => {
 
 function handleOpenCb(id) {
   const inp = document.getElementById("check" + id);
-  const label = inp.nextElementSibling;
+  const chck = inp.closest(".checkbox");
+  const label = chck.querySelector(".checkbox__label");
   comboInputs.forEach((inp) => {
     inp.checked = false;
   });
   inp.checked = true;
-  comboValue.innerText = label.innerText;
-  console.log(inp);
+  comboValue.innerText = label.textContent;
 }
 
 links.forEach((link) => {

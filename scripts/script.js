@@ -15,6 +15,12 @@ const comboItems = document.querySelectorAll(".combobox__item");
 const comboValue = document.querySelector(".combobox__value");
 const comboInputs = document.querySelectorAll(".checkbox__inp");
 const solBtns = document.querySelectorAll(".sol__btns .sol__btn:first-child");
+const formBtn = document.querySelector(".form__btn");
+const agree = document.getElementById("agree");
+
+agree.onchange = (e) => {
+  formBtn.disabled = !formBtn.disabled;
+};
 
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document

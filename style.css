@@ -1821,6 +1821,14 @@ input[type="checkbox"]:checked::before {
 .form__btn {
   align-self: flex-start;
 }
+.form__btn:disabled {
+  background: var(
+    --Action-Neutral-Secondary-Selected,
+    rgba(229, 234, 244, 0.2)
+  );
+  border: 1px solid
+    var(--Action-Neutral-Secondary-Selected, rgba(229, 234, 244, 0.2));
+}
 
 .footer__info {
 }

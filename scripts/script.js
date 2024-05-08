@@ -17,9 +17,131 @@ const comboInputs = document.querySelectorAll(".checkbox__inp");
 const solBtns = document.querySelectorAll(".sol__btns .sol__btn:first-child");
 const formBtn = document.querySelector(".form__btn");
 const agree = document.getElementById("agree");
+const mobile = document.querySelectorAll(".header__text");
+const mobileLabel = document.querySelectorAll(".header__label");
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.defaults({
+  ease: "power2.out",
+  duration: 0.5,
+});
+
+gsap.from(".header__main > * > *", {
+  opacity: 0,
+  scale: 1.05,
+  stagger: {
+    each: 0.1,
+  },
+});
+
+let solTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sol",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+solTl
+  .from(".sol__title", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } })
+  .from(".sol__about", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } });
+
+let findTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".find",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+findTl
+  .from(".find__title", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } })
+  .from(".find__subtitle", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } })
+  .from(".find__btn", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } });
+
+let caseTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".case",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+caseTL.from(".case__title", { opacity: 0, scale: 1.05 });
+caseTL.from(".case__item", {
+  opacity: 0,
+  scale: 1.05,
+  stagger: { each: 0.1 },
+});
+
+let intTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".int",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+intTL.from(".int__text > *", {
+  opacity: 0,
+  scale: 1.05,
+  stagger: { each: 0.1 },
+});
+intTL.from(".int__subtitle, .person__img, .person__name", {
+  opacity: 0,
+  scale: 1.05,
+  stagger: { each: 0.1 },
+});
+
+intTL.from(".int__item", {
+  opacity: 0,
+  scale: 1.05,
+  stagger: { each: 0.1 },
+});
+
+let techTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tech",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+techTL
+  .from(".tech__left > *", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } })
+  .from(".tech__right > *", {
+    opacity: 0,
+    scale: 1.05,
+    stagger: { each: 0.1 },
+  })
+  .from(".tech__card", {
+    opacity: 0,
+    scale: 1.05,
+    stagger: { each: 0.1 },
+  });
+
+let footerTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top 40%",
+    end: "bottom bottom",
+  },
+});
+
+footerTl
+  .from(".footer__title", { opacity: 0, scale: 1.05, stagger: { each: 0.1 } })
+  .from(".footer__subtitle", {
+    opacity: 0,
+    scale: 1.05,
+    stagger: { each: 0.1 },
+  });
+
+let checked = true;
 
 agree.onchange = (e) => {
-  formBtn.disabled = !formBtn.disabled;
+  checked = !checked;
+  formBtn.disabled = checked;
 };
 
 let vh = window.innerHeight * 0.01;
@@ -74,9 +196,17 @@ function closeBurger() {
 }
 
 const windowInnerWidth = window.innerWidth;
+
 if (windowInnerWidth < 758) {
   logo.src = "./img/logo-mobile.svg";
+
+  mobile[2].innerText = "1300 судебных разбирательств";
+  mobileLabel[0].remove();
+
+  mobile[3].innerText = "→ 93% выигранных процессов";
+  mobileLabel[1].remove();
 }
+
 moreBTns.forEach((btn) => {
   btn.onclick = handleMore;
 });

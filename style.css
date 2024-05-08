@@ -255,7 +255,7 @@ h3 {
   background: var(--Action-Accent-Primary-Rest);
   border: 1px solid var(--Border-Neutral-Primary);
   border-radius: 4px;
-  transition: all 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
 }
 .btn-pr:hover {
   background: var(--Action-Accent-Primary-Hover);
@@ -371,7 +371,7 @@ h3 {
 .header__bg {
   position: absolute;
   right: 0;
-  top: -6vh;
+  top: 0;
   width: 100dvw;
   height: 80dvh;
   z-index: 2;
@@ -408,6 +408,11 @@ h3 {
   display: none;
 }
 @media (max-width: 1416px) {
+  .container {
+    padding: 0px 48px;
+  }
+}
+@media (max-width: 758px) {
   .container {
     padding: 0px 10px;
   }
@@ -522,14 +527,14 @@ h3 {
   }
   .header__bg {
     position: absolute;
-    right: -70vw;
+    right: -30vw;
     top: 350px;
     width: 986px;
     height: 463px;
     z-index: 2;
     mix-blend-mode: lighten;
 
-    transform: scale(1, -1) rotate(43deg);
+    transform: scale(1, -1) rotate(20deg);
   }
 
   .header .gradient-md {
@@ -570,7 +575,7 @@ h3 {
 .sol__about {
   font-weight: 400;
   width: calc(100% / 3);
-
+  font-family: "Inter Display";
   color: var(--Content-Secondary, #bac1da);
 }
 .sol__filters {
@@ -774,6 +779,8 @@ h3 {
   gap: 16px;
 }
 .sol__img {
+  width: 64px;
+  height: 64px;
   border-radius: 4px;
 }
 .btn-more {
@@ -1001,7 +1008,7 @@ h3 {
   border-radius: 4px;
   position: relative;
   justify-content: space-between;
-  transition: all 0.3s ease 0s;
+  transition: background 0.3s ease 0s opacity 0.3s ease 0s;
   z-index: 2;
 }
 
@@ -1277,10 +1284,11 @@ h3 {
   color: var(--Content-Tertiary, #7583b5);
 }
 .int__title {
+  font-family: "AvantGardeGothicITC";
   font-size: clamp(48px, calc(24px + 6vw), 80px);
   line-height: clamp(48px, calc(27px + 5.25vw), 80px);
   letter-spacing: clamp(-2px, -2vw, -3px);
-
+  font-weight: 500;
   background: #181d2f;
   background: linear-gradient(to right, #181d2f 0%, #273fa4 100%);
   -webkit-background-clip: text;
@@ -1645,7 +1653,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 48px 0px;
+  padding: 0px;
 
   position: relative;
   z-index: 2;

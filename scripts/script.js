@@ -27,7 +27,7 @@ gsap.defaults({
   duration: 0.5,
 });
 
-gsap.from(".header__main > * > *", {
+gsap.from(".header__body > * > *", {
   opacity: 0,
   scale: 1.05,
   stagger: {

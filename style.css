@@ -330,7 +330,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 32px;
-  transition: all 0.3s ease 0s;
+  transition: height 0.3s ease 0s, opacity 0.3s ease 0s, padding 0.3s ease 0s;
 }
 
 .header__body {
@@ -578,7 +578,7 @@ h3 {
   width: calc(100% * 2 / 3);
 }
 .sol__about {
-  font-weight: 400;
+  font-weight: 500;
   width: calc(100% / 3);
   font-family: "Inter Display";
   color: var(--Content-Secondary, #bac1da);
@@ -790,6 +790,7 @@ h3 {
 }
 .btn-more {
   display: none;
+  font-size: 14px;
 }
 .sol__info {
 }
@@ -861,7 +862,11 @@ h3 {
     max-height: 550px;
     min-height: 332px;
     height: fit-content;
+    padding: 20px 16px;
     /* height: min-content; */
+  }
+  .sol__subtitle {
+    margin-bottom: 12px;
   }
   .sol__img {
     width: 36px;
@@ -871,6 +876,9 @@ h3 {
     display: block;
     border: none;
     outline: none;
+  }
+  .btn-more:hover {
+    background: none;
   }
   .sol__btn {
     width: 100%;
@@ -1000,9 +1008,15 @@ h3 {
 .case__items {
   display: flex;
   flex-wrap: wrap;
+
   gap: 16px;
   width: 100%;
   margin-top: 64px;
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.case__items::-webkit-scrollbar {
+  display: none;
 }
 .case__item {
   width: calc(100% / 3 - 11px);
@@ -1533,20 +1547,13 @@ h3 {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: linear-gradient(0deg, #dde0ec, #dde0ec),
-    radial-gradient(
-        198.45% 122.14% at 72.19% -31.24%,
-        #323c61 0%,
-        #ffffff 0.01%,
-        rgba(255, 255, 255, 0) 61.53%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    radial-gradient(
-        129.38% 92.15% at 55.22% 119.68%,
-        #ffffff 0%,
-        rgba(255, 255, 255, 0) 91.15%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: #ffffff;
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 0%,
+    #dde0ec 50%,
+    #ffffff 100%
+  );
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;

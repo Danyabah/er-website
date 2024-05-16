@@ -174,6 +174,7 @@ function handleOpenCb(id) {
     inp.checked = false;
   });
   inp.checked = true;
+  combox.classList.remove("combobox-active");
   comboValue.innerText = label.textContent;
 }
 

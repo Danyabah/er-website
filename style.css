@@ -427,6 +427,7 @@ h3 {
   backdrop-filter: blur(10px);
   opacity: 1 !important;
 }
+
 @media (max-width: 758px) {
   .header__wrapper {
     position: relative;
@@ -452,7 +453,13 @@ h3 {
     background: rgba(17, 20, 32, 0.8);
     gap: 16px;
   }
-
+  .header__nav .header__link:last-child{
+    opacity: 0;
+  }
+  .header__nav-active .header__link:last-child{
+    transition: opacity 0.3s ease 0.3s;
+    opacity: 1;
+  }
   .header__close {
     width: 13px;
     height: 13px;
@@ -1112,7 +1119,7 @@ h3 {
   position: relative;
 }
 .case__top {
-  max-width: 400px;
+  max-width: calc(100% - 64px);
 }
 
 .case__name {
@@ -1211,6 +1218,9 @@ h3 {
     min-width: 300px;
     padding: 16px;
     height: 350px;
+  }
+  .case__top {
+    max-width: calc(100% - 32px);
   }
 
   .case__item:hover::before {

@@ -19,6 +19,8 @@ const formBtn = document.querySelector(".form__btn");
 const agree = document.getElementById("agree");
 const mobile = document.querySelectorAll(".header__text");
 const mobileLabel = document.querySelectorAll(".header__label");
+const cards = document.querySelectorAll(".tech__card");
+const cardsContainer = document.querySelector(".tech__cards");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,12 +179,13 @@ function handleOpenCb(id) {
   combox.classList.remove("combobox-active");
   comboValue.innerText = label.textContent;
 }
-
-links.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    closeBurger();
+if (window.innerWidth < 758) {
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      closeBurger();
+    });
   });
-});
+}
 
 headerClose.addEventListener("click", (event) => {
   closeBurger();
@@ -259,3 +262,32 @@ function handleMore(event) {
     list.classList.remove("sol__list-active");
   }
 }
+
+cards.forEach((card) => {
+  if (windowInnerWidth > 758) {
+    card.addEventListener("mouseenter", (event) => {
+      cardsContainer.style.animationPlayState = "paused";
+    });
+    card.addEventListener("mouseleave", (event) => {
+      cardsContainer.style.animationPlayState = "running";
+    });
+  } else {
+    card.addEventListener("touchstart", (event) => {
+      cardsContainer.style.animationPlayState = "paused";
+    });
+    card.addEventListener("touchend", (event) => {
+      cardsContainer.style.animationPlayState = "running";
+    });
+    // card.addEventListener("click", (event) => {
+    //   const x = card.getBoundingClientRect().x;
+    //   console.log(cardsContainer.scrollLeft);
+    //   console.log(getComputedStyle(cardsContainer));
+    //   console.log(card.getBoundingClientRect());
+    //   cardsContainer.style.overflowX = "scroll";
+    //   cardsContainer.style.animation = "none";
+    //   cardsContainer.style.width = "103%";
+    //   cardsContainer.scrollLeft = x;
+    //   console.log(cardsContainer.scrollLeft);
+    // });
+  }
+});

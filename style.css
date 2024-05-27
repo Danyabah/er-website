@@ -1522,6 +1522,9 @@ h3 {
   width: calc(410px * 8);
 }
 .tech__card > * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 .tech__card {

@@ -1521,6 +1521,9 @@ h3 {
   display: flex;
   width: calc(410px * 8);
 }
+.tech__card > * {
+  user-select: none;
+}
 .tech__card {
   height: 435px;
   min-width: 400px;

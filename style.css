@@ -1885,7 +1885,7 @@ input[type="checkbox"]:checked::before {
   border-bottom: 1px solid #e5eaf433;
 }
 .footer__block {
-  max-width: 330px;
+  max-width: 318px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1908,6 +1908,7 @@ input[type="checkbox"]:checked::before {
 }
 .footer__link {
   padding: 4px 0px;
+  font-size: 14px;
 }
 .footer__block .footer__link:not(:last-child) {
   margin-bottom: 4px;
@@ -1948,6 +1949,9 @@ input[type="checkbox"]:checked::before {
   right: 0vw;
   bottom: 0vw;
   z-index: 1;
+}
+.footer__name-margin-top {
+  margin-top: 32px;
 }
 @media (max-width: 758px) {
   .footer {

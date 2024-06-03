@@ -810,6 +810,7 @@ h3 {
   text-transform: lowercase;
   letter-spacing: 0.1px;
   line-height: 16px;
+  text-transform: none;
 }
 .sol__subtitle {
   margin-bottom: 16px;
@@ -1348,6 +1349,9 @@ h3 {
 }
 .person__img {
   border-radius: 2px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
 }
 .person__name {
   font-size: 14px;
@@ -1503,23 +1507,27 @@ h3 {
 .tech__img-wrapper {
 }
 .tech__img {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .tech__text {
   color: var(--Content-Primary-Inverted, #191e31);
   max-width: 340px;
 }
+.tech__cards-container {
+  display: flex;
+  gap: 8px;
+}
 .tech__cards {
   display: flex;
   gap: 8px;
-  width: 100%;
-  overflow: hidden;
   position: relative;
-  animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
   animation-delay: 2s;
   display: flex;
-  width: calc(410px * 8);
 }
 .tech__card > * {
   -moz-user-select: none;
@@ -1538,13 +1546,16 @@ h3 {
   position: relative;
   z-index: 2;
 }
+.tech__cards-container:hover .tech__cards {
+  animation-play-state: paused;
+}
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-410px * 4));
+    transform: translateX(-100%);
   }
 }
 
@@ -1559,7 +1570,6 @@ h3 {
   border-radius: 8px;
   border: 1px solid var(--Border-Inverted-Inverted-Tertiary, #191e311a);
   background: var(--Surface-Primary-Inverted, #eef0f6);
-
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -1651,8 +1661,7 @@ h3 {
     max-width: 340px;
   }
   .tech__cards {
-    width: calc(358px * 8);
-    animation: scroll 40s linear infinite;
+    animation: scroll 30s linear infinite;
     animation-delay: 2s;
   }
   .tech__card {
@@ -1672,7 +1681,7 @@ h3 {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-358px * 4));
+      transform: translateX(-100%);
     }
   }
 }

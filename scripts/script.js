@@ -180,7 +180,7 @@ function handleOpenCb(id) {
   combox.classList.remove("combobox-active");
   comboValue.innerText = label.textContent;
 }
-if (window.innerWidth < 758) {
+if (window.innerWidth < 800) {
   links.forEach((link) => {
     link.addEventListener("click", (event) => {
       closeBurger();
@@ -202,7 +202,7 @@ function closeBurger() {
 
 const windowInnerWidth = window.innerWidth;
 
-if (windowInnerWidth < 758) {
+if (windowInnerWidth < 800) {
   logo.src = "./img/logo-mobile.svg";
 
   mobile[2].innerText = "1300 судебных разбирательств";
@@ -264,7 +264,7 @@ function handleMore(event) {
   }
 }
 
-if (windowInnerWidth < 758) {
+if (windowInnerWidth < 800) {
   cardsContainer.addEventListener("touchstart", (event) => {
     techCards.forEach((cards) => {
       cards.style.animationPlayState = "paused";
@@ -276,3 +276,88 @@ if (windowInnerWidth < 758) {
     });
   });
 }
+
+// video
+const popup = document.querySelector(".popup__wrapper");
+
+const popupWrapper = document.querySelector(".popup__play-wrapper");
+const popupPlay = document.querySelector(".popup__play");
+const popupPause = document.querySelector(".popup__pause");
+const popupVideo = document.querySelector(".video");
+const progress = document.querySelector(".popup__range");
+const soundWrapper = document.querySelector(".sound__wrapper");
+
+popupWrapper.onclick = function () {
+  if (popupPause.classList.contains("hidden")) {
+    play();
+  } else {
+    pause();
+  }
+};
+
+popupVideo.ontimeupdate = progressUpdate;
+
+progress.onclick = videoRewind;
+
+soundWrapper.onclick = toggleMute;
+
+function play() {
+  popupVideo.play();
+  popupPause.classList.remove("hidden");
+  popupPlay.classList.add("hidden");
+}
+
+function pause() {
+  popupVideo.pause();
+  popupPause.classList.add("hidden");
+  popupPlay.classList.remove("hidden");
+}
+
+function progressUpdate() {
+  let d = popupVideo.duration;
+  let c = popupVideo.currentTime;
+  progress.value = (100 * c) / d;
+}
+
+function videoRewind(event) {
+  let w = this.offsetWidth;
+  let o = event.offsetX;
+
+  this.value = (100 * o) / w;
+  pause();
+  popupVideo.currentTime = popupVideo.duration * (o / w);
+  play();
+}
+
+function toggleMute() {
+  popupVideo.muted = !popupVideo.muted;
+  soundWrapper.classList.toggle("muted");
+}
+
+popup.addEventListener("click", (event) => {
+  if (!event.target.closest(".popup")) {
+    popup.classList.remove("popup-active");
+    popupVideo.currentTime = 0;
+    pause();
+  }
+});
+
+// availablepopup
+const images = document.querySelectorAll(".sol__img-wrap");
+const source = popupVideo.getElementsByTagName("source")[0];
+const techimgWrapper = document.querySelector(".tech__img-wrapper");
+
+images.forEach((img) => {
+  img.onclick = function () {
+    popupVideo.src = img.dataset.video;
+    popup.classList.add("popup-active");
+    popupVideo.load();
+    play();
+  };
+});
+techimgWrapper.onclick = function () {
+  popupVideo.src = techimgWrapper.dataset.video;
+  popup.classList.add("popup-active");
+  popupVideo.load();
+  play();
+};

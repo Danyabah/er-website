@@ -22,6 +22,7 @@ const mobileLabel = document.querySelectorAll(".header__label");
 const cards = document.querySelectorAll(".tech__card");
 const cardsContainer = document.querySelector(".tech__cards-container");
 const techCards = document.querySelectorAll(".tech__cards");
+const toTop = document.querySelector(".to__top");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -150,12 +151,78 @@ agree.onchange = (e) => {
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty("--vh", `${vh}px`);
+// to top
+toTop.onclick = function () {
+  window.scrollTo(0, 0);
+};
+const white = document.querySelector("section.white");
+const black = document.querySelector("footer.black");
+const caseBlack = document.querySelector(".case-black");
+
+const cook = document.querySelector(".cook");
+const cookBtn = document.querySelector(".cook__btn");
+const cookClose = document.querySelector(".cook__close");
+
+cookBtn.onclick = closeCook;
+
+cookClose.onclick = closeCook;
+
+function closeCook() {
+  localStorage.setItem("closed", "cook");
+
+  cook.classList.remove("cook-active");
+}
+
+function openCook() {
+  cook.classList.add("cook-active");
+}
+if (!localStorage.getItem("closed")) {
+  setTimeout(() => {
+    cook.classList.add("cook-active");
+  }, 1000);
+}
+
+document.addEventListener("scroll", () => {
+  let elementRectWhite = white.getBoundingClientRect();
+  let elementWhiteTop = elementRectWhite.top;
+  let viewportHeight =
+    window.innerHeight || document.documentElement.clientHeight;
+  let elementWhiteBottom = elementRectWhite.bottom;
+  if (white && !toTop.classList.contains("black")) {
+    if (elementWhiteTop >= 0 && elementWhiteTop <= viewportHeight) {
+      toTop.classList.add("black");
+    } else if (
+      elementWhiteBottom >= 0 &&
+      elementWhiteBottom <= viewportHeight
+    ) {
+      toTop.classList.add("black");
+    }
+  }
+  let elementRectBlack = black.getBoundingClientRect();
+  let elementBlackTop = elementRectBlack.top;
+  if (black && toTop.classList.contains("black")) {
+    if (elementBlackTop >= 0 && elementBlackTop <= viewportHeight) {
+      toTop.classList.remove("black");
+    }
+  }
+  let elementcaseBlack = caseBlack.getBoundingClientRect();
+  let elementCasekTop = elementcaseBlack.top;
+  let elementCaseBottom = elementcaseBlack.bottom;
+
+  if (caseBlack && toTop.classList.contains("black")) {
+    if (elementCasekTop >= 0 && elementCasekTop <= viewportHeight) {
+      toTop.classList.remove("black");
+    }
+  }
+});
 
 burger.addEventListener("click", (event) => {
   burger.style.display = "none";
   wrapper.style.width = "50%";
   document.body.classList.add("burger-body");
   nav.classList.add("header__nav-active");
+  toTop.classList.add("hidden");
+  cook.classList.remove("cook-active");
 });
 solBtns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
@@ -198,6 +265,10 @@ function closeBurger() {
   document.body.classList.remove("burger-body");
   console.log("ddd");
   nav.classList.remove("header__nav-active");
+  toTop.classList.remove("hidden");
+  if (!localStorage.getItem("closed")) {
+    cook.classList.add("cook-active");
+  }
 }
 
 const windowInnerWidth = window.innerWidth;
@@ -265,6 +336,7 @@ function handleMore(event) {
 }
 
 if (windowInnerWidth < 800) {
+  document.querySelector(".link-footer-mobile").href = "#footer";
   cardsContainer.addEventListener("touchstart", (event) => {
     techCards.forEach((cards) => {
       cards.style.animationPlayState = "paused";

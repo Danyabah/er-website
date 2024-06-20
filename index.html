@@ -48,7 +48,11 @@
               <a href="#case" class="lm link-w header__link">Кейсы</a>
               <a href="#int" class="lm link-w header__link">Этика</a>
               <a href="#tech" class="lm link-w header__link">Технологии</a>
-              <a href="#contact" class="lm link-w header__link">Контакты</a>
+              <a
+                href="#contact"
+                class="lm link-w header__link link-footer-mobile"
+                >Контакты</a
+              >
               <a href="#contact" class="lm btn-pr btn-sm header__link"
                 >Оставить заявку</a
               >
@@ -106,6 +110,36 @@
           </div>
         </div>
       </div>
+      <div class="to__top">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 21V3M12 3L20.5 11.5M12 3L3.5 11.5"
+            stroke="#EEF0F6"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="cook">
+        <p class="cook__title">Cайт использует cookie</p>
+        <p class="cook__text">
+          ООО «Газпромнефть Экспертные решения» обрабатывает файлы cookie.
+          Они&#160;помогают нам делать этот сайт удобнее для&#160;пользователей.
+          Продолжая работу с&#160;сайтом expert-solutions.ru,
+          вы&#160;соглашаетесь с&#160;обработкой файлов cookie вашего браузера.
+        </p>
+        <button class="btn-md btn-pr cook__btn">Хорошо</button>
+        <button class="cook__close">
+          <img src="./img/close-btn.svg" alt="" />
+        </button>
+      </div>
     </header>
     <main class="main">
       <section class="sol" id="sol">
@@ -115,9 +149,9 @@
               Находим работающие решения для ваших задач
             </h2>
             <h3 class="pl sol__about">
-              Беремся за задачи, в которых у нас есть опыт и экспертиза. За
-              каждое решение отвечает команда опытных юристов,
-              которая&#160;найдет подход к вашему бизнесу
+              Беремся за задачи, в которых у&#160;нас есть опыт
+              и&#160;экспертиза. За&#160;каждое решение отвечает команда опытных
+              юристов, которая&#160;найдет подход к вашему бизнесу
             </h3>
           </div>
           <div class="sol__filters">
@@ -1009,7 +1043,7 @@
           </div>
         </div>
       </section>
-      <section class="case" id="case">
+      <section class="case case-black" id="case">
         <img
           src="./img/elipse-case-left.svg"
           alt=""
@@ -1028,7 +1062,7 @@
         <div class="container">
           <div class="case__body">
             <h2 class="case__title">
-              Гордимся, что приносим бизнесу пользу на практике
+              Гордимся, что&#160;приносим бизнесу пользу на&#160;практике
             </h2>
             <div class="case__items">
               <div class="case__item">
@@ -1265,7 +1299,7 @@
         </div>
       </section>
 
-      <section class="int" id="int">
+      <section class="int white" id="int">
         <img src="./img/Line-vertical.svg" alt="" class="line-vertical" />
         <img src="./img/Line-horizontal.svg" alt="" class="line-horizontal" />
         <img src="./img/Line-rounded.svg" alt="" class="line-rounded" />
@@ -1277,9 +1311,9 @@
             </div>
             <div class="int__info">
               <h4 class="ll int__subtitle">
-                Постоянно обновляясь, но оставаясь верными принципам, мы знаем,
+                «Постоянно обновляясь, но оставаясь верными принципам, мы знаем,
                 что только через взаимное доверие и стремление к совершенству
-                можно получать измеримые результаты
+                можно получать измеримые результаты»
               </h4>
               <div class="int__person">
                 <img src="./img/evgenya.png" alt="" class="person__img" />
@@ -1393,9 +1427,9 @@
                 </h2>
                 <h4 class="pl tech__subtitle">
                   Чтобы сделать консалтинг быстрым, доступным
-                  и&#160;экологичным, мы полагаемся на цифровые технологические
-                  решения — от систем проектирования документов до платформ
-                  управления проверками и спорами.
+                  и&#160;экологичным, мы&#160;полагаемся на&#160;цифровые
+                  технологические решения — от&#160;систем проектирования
+                  документов до&#160;платформ управления проверками и спорами.
                 </h4>
               </div>
               <div class="tech__right">
@@ -1404,7 +1438,7 @@
                 </div>
                 <p class="pm tech__text">
                   Посмотрите, что о любви технологий и&#160;юриспруденции
-                  говорит Константина Константиновна, директор по инновациям
+                  говорит Евгения Волковская, наш&#160;генеральный директор
                 </p>
               </div>
             </div>
@@ -1685,7 +1719,7 @@
       </section>
     </main>
 
-    <footer class="footer" id="contact">
+    <footer class="footer black" id="contact">
       <img src="./img/Ellipse-md.svg" alt="" class="gradient-md" />
       <img src="./img/Ellipse-sm.svg" alt="" class="gradient-sm" />
       <img src="./img/Ellipse-verybig.svg" alt="" class="gradient-big" />
@@ -1694,10 +1728,10 @@
           <div class="footer__top">
             <div class="footer__left">
               <h2 class="footer__title">
-                Расскажите о задаче, мы найдем решение
+                Расскажите о&#160;задаче, мы&#160;найдем решение
               </h2>
               <h4 class="pl footer__subtitle">
-                Расскажем о процессе, обсудим детали,<br />
+                Расскажем о&#160;процессе, обсудим детали,<br />
                 риски и сроки проекта
               </h4>
             </div>
@@ -1849,8 +1883,7 @@
                     href="./persdata.html"
                     >согласие на обработку персональных данных</a
                   >
-                  в соответствии с
-                  <a
+                  в&#160;соответствии с&#160;<a
                     class="lm checkbox__label pers__link"
                     href="./privacypol.html"
                     >Политикой конфиденциальности</a
@@ -1885,25 +1918,25 @@
               </button>
             </form>
           </div>
-          <div class="footer__info">
+          <div class="footer__info" id="footer">
             <nav class="footer__links">
               <div class="footer__block">
                 <h4 class="lm footer__name">Офисы</h4>
 
-                <a href="" class="lm link-w footer__link"
-                  >Санкт-Петербург, Невский проспект,  д. 38/4</a
+                <span href="" class="lm link-w footer__link"
+                  >Санкт-Петербург, Невский проспект,  д.&#160;38/4</span
                 >
-                <a href="" class="lm link-w footer__link"
-                  >Санкт-Петербург, ул. Большая Морская, д. 20</a
+                <span href="" class="lm link-w footer__link"
+                  >Санкт-Петербург, ул. Большая Морская, д.&#160;20</span
                 >
-                <a href="" class="lm link-w footer__link"
-                  >Москва, Новинский бульвар, д. 31</a
+                <span href="" class="lm link-w footer__link"
+                  >Москва, Новинский бульвар, д.&#160;31</span
                 >
-                <a href="" class="lm link-w footer__link"
-                  >Тюмень, ул. Холодильная д. 77</a
+                <span href="" class="lm link-w footer__link"
+                  >Тюмень, ул. Холодильная д.&#160;77</span
                 >
-                <a href="" class="lm link-w footer__link"
-                  >Омск, проспект Губкина, д. 1</a
+                <span href="" class="lm link-w footer__link"
+                  >Омск, проспект Губкина, д.&#160;1</span
                 >
               </div>
               <div class="footer__block">
@@ -1934,24 +1967,26 @@
                 <img src="./img/logo.svg" alt="" class="footer__logo" />
 
                 <p class="pm footer__text">
-                  Юридический консалтинг для крупного бизнеса. Меняем
-                  юридическую функцию под потребности и скорость бизнеса
+                  Юридический консалтинг для&#160;крупного бизнеса. Меняем
+                  юридическую функцию под&#160;потребности и&#160;скорость
+                  бизнеса
                 </p>
               </div>
             </nav>
             <div class="footer__bottom">
               <p class="lm footer__link footer__p">
                 © 2024 ООО «Газпромнефть Экспертные решения». Сайт используется
-                пользователем на условиях «как есть» (as is). Владелец сайта не
-                предоставляет никаких гарантий в отношении соответствия сайта и
-                информации, размещенной на нем, конкретным целям и ожиданиям
-                пользователя. Информация, размещенная на сайте, не является
-                приглашением делать оферты, офертой, публичной офертой,
-                публичным договором, не содержит существенных условий,
-                необходимых для заключения договоров. Сайт содержит объекты
-                интеллектуальной собственности, исключительные права на которые
-                принадлежат владельцу сайта или третьим лицам, предоставившим
-                владельцу сайта соответствующее право использования.
+                пользователем на&#160;условиях «как есть» (as is). Владелец
+                сайта не предоставляет никаких гарантий в&#160;отношении
+                соответствия сайта и&#160;,&#160;размещенной на&#160;нем,
+                конкретным целям и&#160;ожиданиям пользователя. Информация,
+                размещенная на&#160;сайте, не является приглашением делать
+                оферты, офертой, публичной офертой, публичным договором,
+                не&#160;содержит существенных условий, необходимых для
+                заключения договоров. Сайт содержит объекты интеллектуальной
+                собственности, исключительные права на&#160;которые принадлежат
+                владельцу сайта или&#160;третьим лицам, предоставившим владельцу
+                сайта соответствующее право использования.
               </p>
               <a
                 href="https://punklab.ru/"

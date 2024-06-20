@@ -179,7 +179,7 @@ function openCook() {
 if (!localStorage.getItem("closed")) {
   setTimeout(() => {
     cook.classList.add("cook-active");
-  }, 1000);
+  }, 7000);
 }
 
 document.addEventListener("scroll", () => {

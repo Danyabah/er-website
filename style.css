@@ -312,6 +312,10 @@ h3 {
   position: relative;
   height: auto;
 }
+.header-pers {
+  position: relative;
+  height: auto;
+}
 .mobile {
   display: none;
 }

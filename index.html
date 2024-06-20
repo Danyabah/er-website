@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Экспертные Решения</title>
     <link rel="stylesheet" href="./style.css" />
-    <link type="image/svg+xml" href="./img/avatar.svg" rel="shortcut icon" />
-    <link type="image/svg+xml" href="./img/avatar.svg" rel="icon" />
+    <link type="image/png" href="./img/avatar.png" rel="shortcut icon" />
+    <link type="image/png" href="./img/avatar.png" rel="icon" />
     <!-- <script src="./libs/p5.min.js" defer></script> -->
+
+    <meta property="og:title" content="Экспертные Решения" />
+    <meta
+      property="og:description"
+      content="Правовые решения для крупного бизнеса"
+    />
+    <meta property="og:image" content="./img/Opengraph.png" />
+    <meta property="og:url" content="https://expert-solutions.ru/" />
 
     <script src="./libs/split-type/umd/index.min.js"></script>
     <script
@@ -61,7 +69,7 @@
                 <p class="hm header__text">
                   Инхаус-команда группы компаний «Газпром нефть»
                 </p>
-                <a href="" class="lm btn-sc btn-sm header__block-link"
+                <a href="#int" class="lm btn-sc btn-sm header__block-link"
                   >Этика компании</a
                 >
               </div>
@@ -70,7 +78,9 @@
                   380 юристов в 20 городах <br />
                   России и СНГ
                 </p>
-                <a href="" class="lm btn-sc btn-sm header__block-link">Кейсы</a>
+                <a href="#sol" class="lm btn-sc btn-sm header__block-link"
+                  >Решения</a
+                >
               </div>
 
               <div class="header__block header__block-row">
@@ -79,6 +89,11 @@
                     1300 <span class="desktop">→</span>
                   </p>
                   <p class="pm header__label">судебных разбирательств</p>
+                  <a
+                    href="#case"
+                    class="lm btn-sc btn-sm header__block-link header__case"
+                    >Кейсы</a
+                  >
                 </div>
                 <div class="header__block-item">
                   <p class="hm header__text">
@@ -122,11 +137,15 @@
           <div class="sol__body">
             <div class="sol__item eff" id="1">
               <div class="sol__header">
-                <img
-                  src="./img/1_Бухтоярова-С.В..png"
-                  alt=""
-                  class="sol__img"
-                />
+                <!-- в каждый такой элемент своя ссылка на видео которое он открывает -->
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img
+                    src="./img/1_Бухтоярова-С.В..png"
+                    alt=""
+                    class="sol__img"
+                  />
+                </div>
+
                 <div class="sol__info">
                   <p class="lm sol__name">Светлана Бухтоярова</p>
                   <p class="c sol__job">
@@ -225,7 +244,9 @@
             </div>
             <div class="sol__item eff" id="2">
               <div class="sol__header">
-                <img src="./img/0_Заглушка.png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img src="./img/0_Заглушка.png" alt="" class="sol__img" />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Денис Лыжин</p>
                   <p class="c sol__job">
@@ -298,7 +319,9 @@
             </div>
             <div class="sol__item reg" id="3">
               <div class="sol__header">
-                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img src="./img/people.png" alt="" class="sol__img" />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Анастасия Мазуркова</p>
                   <p class="c sol__job">
@@ -396,7 +419,9 @@
             </div>
             <div class="sol__item reg" id="4">
               <div class="sol__header">
-                <img src="./img/6_Рыжкова-Е..png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img src="./img/6_Рыжкова-Е..png" alt="" class="sol__img" />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Елена Рыжкова</p>
                   <p class="c sol__job">
@@ -495,7 +520,13 @@
             </div>
             <div class="sol__item reg" id="5">
               <div class="sol__header">
-                <img src="./img/3_Малыхин-А-(1).png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img
+                    src="./img/3_Малыхин-А-(1).png"
+                    alt=""
+                    class="sol__img"
+                  />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Антон Малыхин</p>
                   <p class="c sol__job">
@@ -597,7 +628,9 @@
             </div>
             <div class="sol__item new" id="6">
               <div class="sol__header">
-                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img src="./img/people.png" alt="" class="sol__img" />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Сергей Григоров</p>
                   <p class="c sol__job">
@@ -698,11 +731,13 @@
             </div>
             <div class="sol__item new" id="7">
               <div class="sol__header">
-                <img
-                  src="./img/5_Наконечный-Л.-2.png"
-                  alt=""
-                  class="sol__img"
-                />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img
+                    src="./img/5_Наконечный-Л.-2.png"
+                    alt=""
+                    class="sol__img"
+                  />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Лев Наконечный</p>
                   <p class="c sol__job">
@@ -799,11 +834,13 @@
             </div>
             <div class="sol__item new" id="8">
               <div class="sol__header">
-                <img
-                  src="./img/2_Кириллова-Т-(1).png"
-                  alt=""
-                  class="sol__img"
-                />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img
+                    src="./img/2_Кириллова-Т-(1).png"
+                    alt=""
+                    class="sol__img"
+                  />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Татьяна Кириллова</p>
                   <p class="c sol__job">
@@ -878,7 +915,9 @@
             </div>
             <div class="sol__item new" id="9">
               <div class="sol__header">
-                <img src="./img/people.png" alt="" class="sol__img" />
+                <div class="sol__img-wrap" data-video="./img/example.mp4">
+                  <img src="./img/people.png" alt="" class="sol__img" />
+                </div>
                 <div class="sol__info">
                   <p class="lm sol__name">Александр Шелкунов</p>
                   <p class="c sol__job">
@@ -1238,15 +1277,16 @@
             </div>
             <div class="int__info">
               <h4 class="ll int__subtitle">
-                К 2025 году мы планируем полностью оцифровать обслуживание и
-                снизить время подготовки решения до трех часов
+                Постоянно обновляясь, но оставаясь верными принципам, мы знаем,
+                что только через взаимное доверие и стремление к совершенству
+                можно получать измеримые результаты
               </h4>
               <div class="int__person">
-                <img src="./img/person.png" alt="" class="person__img" />
+                <img src="./img/evgenya.png" alt="" class="person__img" />
                 <p class="person__name">
-                  Константин Константинопольский, директор по инновациям
+                  Евгения Волковская <br />
+                  генеральный директор
                 </p>
-                <img src="./img/ros.png" alt="" class="person__line" />
               </div>
             </div>
           </div>
@@ -1359,8 +1399,8 @@
                 </h4>
               </div>
               <div class="tech__right">
-                <div class="tech__img-wrapper">
-                  <img src="./img/woman.png" alt="" class="tech__img" />
+                <div class="tech__img-wrapper" data-video="./img/example.mp4">
+                  <img src="./img/evgenya.png" alt="" class="tech__img" />
                 </div>
                 <p class="pm tech__text">
                   Посмотрите, что о любви технологий и&#160;юриспруденции
@@ -1644,6 +1684,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer" id="contact">
       <img src="./img/Ellipse-md.svg" alt="" class="gradient-md" />
       <img src="./img/Ellipse-sm.svg" alt="" class="gradient-sm" />
@@ -1677,7 +1718,7 @@
                   />
                 </div>
                 <!-- class="input__wrapper error" если ошибка -->
-                <div class="input__wrapper">
+                <div class="input__wrapper error">
                   <input
                     type="tel"
                     class="ll form__input"
@@ -1801,9 +1842,31 @@
               </div>
               <div class="checkbox">
                 <input type="checkbox" class="checkbox__inp" id="agree" />
-                <label class="lm checkbox__label" for="agree"
-                  >Согласен с политикой обработки персональных данных</label
+                <label class="lm checkbox__label" for="agree">
+                  Выражаю
+                  <a
+                    class="lm checkbox__label pers__link"
+                    href="./persdata.html"
+                    >согласие на обработку персональных данных</a
+                  >
+                  в соответствии с
+                  <a
+                    class="lm checkbox__label pers__link"
+                    href="./privacypol.html"
+                    >Политикой конфиденциальности</a
+                  ></label
                 >
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" class="checkbox__inp" id="add" />
+                <label class="lm checkbox__label" for="add">
+                  Выражаю
+                  <a
+                    class="lm checkbox__label pers__link"
+                    href="./advertising.html"
+                    >согласие на получение рекламно-информационных сообщений</a
+                  >
+                </label>
               </div>
               <button
                 disabled
@@ -1811,6 +1874,14 @@
                 class="lm btn-pr btn-big form__btn"
               >
                 Оставить заявку
+              </button>
+              <!-- При успешной отправки формы убрать класс hidden у кнопки ниже и добавить этот класс на кнопку выше -->
+              <button
+                disabled
+                type="submit"
+                class="lm btn-pr btn-big form__btn success-btn hidden"
+              >
+                Заявка отправлена!
               </button>
             </form>
           </div>
@@ -1829,7 +1900,7 @@
                   >Москва, Новинский бульвар, д. 31</a
                 >
                 <a href="" class="lm link-w footer__link"
-                  >Тюмень. ул. Холодильная д. 77</a
+                  >Тюмень, ул. Холодильная д. 77</a
                 >
                 <a href="" class="lm link-w footer__link"
                   >Омск, проспект Губкина, д. 1</a
@@ -1837,24 +1908,27 @@
               </div>
               <div class="footer__block">
                 <h4 class="lm footer__name">Контакты</h4>
-                <a href="" class="lm link-w footer__link"
-                  >Bukhtoyarova.SV@gazprom-neft.ru</a
+                <a
+                  href="mailto:legal@gazprom-neft.ru"
+                  class="lm link-w footer__link"
+                  >legal@gazprom-neft.ru</a
                 >
-                <a href="" class="lm link-w footer__link">+7 921 436 63 94</a>
+                <a href="tel:+78127791811" class="lm link-w footer__link"
+                  >+7 (812) 779-18-11</a
+                >
                 <h4 class="lm footer__name footer__name-margin-top">
                   Информация
                 </h4>
-                <a href="" class="lm link-w footer__link"
+                <a href="./privacypol.html" class="lm link-w footer__link"
                   >Политика конфиденциальности</a
                 >
-                <a href="" class="lm link-w footer__link">Договор оферты</a>
               </div>
               <div class="footer__block">
                 <h4 class="lm footer__name">Экспертные решения</h4>
-                <a href="" class="lm link-w footer__link">Решения</a>
-                <a href="" class="lm link-w footer__link">Кейсы</a>
-                <a href="" class="lm link-w footer__link">Этика</a>
-                <a href="" class="lm link-w footer__link">Технология</a>
+                <a href="#sol" class="lm link-w footer__link">Решения</a>
+                <a href="#case" class="lm link-w footer__link">Кейсы</a>
+                <a href="#int" class="lm link-w footer__link">Этика</a>
+                <a href="#tech" class="lm link-w footer__link">Технология</a>
               </div>
               <div class="footer__block">
                 <img src="./img/logo.svg" alt="" class="footer__logo" />
@@ -1866,25 +1940,74 @@
               </div>
             </nav>
             <div class="footer__bottom">
-              <div class="footer__item">
-                <a href="" class="lm link-b footer__link"
-                  >22:25 в нашем офисе в Петербурге</a
-                >
-              </div>
-              <div class="footer__item">
-                <a href="" class="lm link-b footer__link"
-                  >Какая-то еще ссылка</a
-                >
-              </div>
-              <div class="footer__item">
-                <a href="" class="lm link-b footer__link"
-                  >Сайт сделан в Панклабе</a
-                >
-              </div>
+              <p class="lm footer__link footer__p">
+                © 2024 ООО «Газпромнефть Экспертные решения». Сайт используется
+                пользователем на условиях «как есть» (as is). Владелец сайта не
+                предоставляет никаких гарантий в отношении соответствия сайта и
+                информации, размещенной на нем, конкретным целям и ожиданиям
+                пользователя. Информация, размещенная на сайте, не является
+                приглашением делать оферты, офертой, публичной офертой,
+                публичным договором, не содержит существенных условий,
+                необходимых для заключения договоров. Сайт содержит объекты
+                интеллектуальной собственности, исключительные права на которые
+                принадлежат владельцу сайта или третьим лицам, предоставившим
+                владельцу сайта соответствующее право использования.
+              </p>
+              <a
+                href="https://punklab.ru/"
+                target="_blank"
+                class="lm link-b footer__link"
+                >Сайт сделан в Панклабе</a
+              >
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="popup__wrapper">
+      <div class="popup">
+        <div class="video__wrapper">
+          <video class="video" preload="metadata" playsinline>
+            <source type="video/mp4" />
+          </video>
+        </div>
+        <div class="popup__controllers">
+          <div class="popup__close-wrapper">
+            <img src="./img/close-video.svg" class="popup__close" alt="" />
+          </div>
+
+          <div class="popup__play-wrapper">
+            <img src="./img/play.svg" alt="" class="popup__play" />
+            <img src="./img/Pause.svg" alt="" class="popup__pause hidden" />
+          </div>
+          <div class="sound__wrapper">
+            <svg
+              class="sound"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 9.33332L13.3337 7.99999M13.3337 7.99999L14.6667 6.66666M13.3337 7.99999L12 6.66666M13.3337 7.99999L14.6667 9.33332"
+                stroke="#F6F8FA"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1.3335 9.23806V6.76193C1.3335 6.02552 1.93045 5.42857 2.66683 5.42857H4.60016C4.73062 5.42857 4.85822 5.39029 4.96714 5.31848L8.9665 2.68152C9.40976 2.38926 10.0002 2.70716 10.0002 3.23809V12.7619C10.0002 13.2928 9.40976 13.6107 8.9665 13.3185L4.96714 10.6815C4.85822 10.6097 4.73062 10.5714 4.60016 10.5714H2.66683C1.93045 10.5714 1.3335 9.97446 1.3335 9.23806Z"
+                stroke="#F6F8FA"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div class="popup__range-container">
+            <progress max="100" value="0" class="popup__range"></progress>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

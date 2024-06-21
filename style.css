@@ -520,7 +520,7 @@ h3 {
   .cook {
     right: 16px;
     bottom: 16px;
-    max-width: 358px;
+    max-width: 330px;
   }
 }
 .header__nav-active {
@@ -1972,6 +1972,13 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.address__link::before {
+  display: none;
+}
+.site__name {
+  white-space: nowrap;
 }
 .footer__left {
   max-width: 50%;
